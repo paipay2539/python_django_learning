@@ -7,12 +7,18 @@ install django: pip install django
 	# do after accessed virenv (1 time)
 create django project:django-admin startproject "project_name"
 	# to create project folder (1 time)
+
+# do after access virenv cd project_name
+
 run server: python manage.py runserver 0.0.0.0:8000 
 	# to allow server ip please do as below.
 	# add {LOWED_HOSTS = ["localhost", "192.168.1.105"]} to settings.py
 	# add {0.0.0.0:8000} to start command like above command
 	# now your can tell another person to access your server by {yourip:8000}
 	# who can access server must be same LAN network
+create app: python manage.py startapp "app_name"
+	# to create app (1 time)
+	# add {INSTALLED_APPS = [ 'myapp',]} to settings.py
 
 
 
