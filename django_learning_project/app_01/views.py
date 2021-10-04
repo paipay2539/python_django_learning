@@ -18,3 +18,13 @@ def hello2_2(request, year, slug):
 def hello3(request, year, slug):
     text = "Hello World3 " + str(year)+ " " + str(slug)
     return HttpResponse(text)
+
+
+from .models import Post
+
+def html_trial(request):
+    visualize = "hello"
+    all_posts = Post.objects.all()
+    dict_send = {'data': visualize, 'all_posts': all_posts}
+    return render(request, "app_01/home.html", dict_send)
+    # key need to same str with html {{ data }}

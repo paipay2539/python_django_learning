@@ -21,6 +21,10 @@ create app: python manage.py startapp "app_name"
 	# add {INSTALLED_APPS = [ 'myapp',]} to settings.py
 
 
+user:pyechan
+email:pyechan@email
+Pass:1234
+
 
 
 

@@ -23,7 +23,9 @@ urlpatterns = [
     path('hello/<int:id>/abc-def/', views.hello2_1, name='hello2_1'),
     re_path(r'hello/(?P<year>[0-9]{4})/(?P<slug>[\w-]+)/$', views.hello2_2, name='hello2_2'),
     re_path(r'hello/(?P<year>[0-9]{4})/(?P<slug>[\w-]+)', views.hello3, name='hello3'),
-
+    path('html_trial/', views.html_trial ),
+    #path('html_trial/', include('app_01.urls')),
+    
     # + : free, {4} : only 4 char
     # pattern : (?P<variable_name> )
     # [0-9] : digit, [\w-] : word that join by '-'
